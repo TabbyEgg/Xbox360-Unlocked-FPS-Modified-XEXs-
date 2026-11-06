@@ -1,0 +1,26 @@
+name: Publish game release assets
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/release-transfer.json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-game-release-assets
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify and publish release files
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 .github/scripts/publish-release-assets.py
