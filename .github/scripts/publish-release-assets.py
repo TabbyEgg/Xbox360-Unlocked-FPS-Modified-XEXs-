@@ -79,14 +79,17 @@ def main() -> None:
             directory.mkdir()
             assets: dict[str, dict] = {}
             with zipfile.ZipFile(io.BytesIO(archive)) as bundle:
-                names = [entry.filename for entry in bundle.infolist()]
+                entries = bundle.infolist()
+                if len(entries) > 1024 or sum(entry.file_size for entry in entries) > 512 * 1024 * 1024:
+                    raise ValueError("Archive extraction limit exceeded")
+                names = [entry.filename for entry in entries]
                 if len(names) != len(set(names)):
                     raise ValueError("Duplicate archive entries")
                 if bundle.testzip() is not None:
                     raise ValueError("Archive CRC check failed")
                 for entry in release["assets"]:
                     name = safe_name(entry["name"])
-                    if name in assets or entry["size"] > 64 * 1024 * 1024:
+                    if name in {"README.md", "SHA256SUMS.txt"} or name in assets or entry["size"] > 64 * 1024 * 1024:
                         raise ValueError("Duplicate or oversized output asset")
                     info = bundle.getinfo(entry["archive_path"])
                     if info.is_dir() or info.file_size != entry["size"]:
@@ -98,7 +101,7 @@ def main() -> None:
 
             if release.get("archive_asset_name"):
                 name = safe_name(release["archive_asset_name"])
-                if name in assets:
+                if name in {"README.md", "SHA256SUMS.txt"} or name in assets:
                     raise ValueError("Duplicate archive asset name")
                 (directory / name).write_bytes(archive)
                 assets[name] = {"size": len(archive), "sha256": digest(archive)}
@@ -110,6 +113,10 @@ def main() -> None:
             assets["SHA256SUMS.txt"] = {"size": len(sums), "sha256": digest(sums)}
             prepared.append((release, directory, assets))
             print(f"Verified {release['tag']}: {len(assets)} assets", flush=True)
+
+        if os.environ.get("RELEASE_VERIFY_ONLY") == "1":
+            print("Verification complete; no releases changed.")
+            return
 
         # Validate all transfer data before creating or publishing any release.
         existing = api(f"repos/{repo}/releases?per_page=100")
@@ -145,6 +152,10 @@ def main() -> None:
                     raise ValueError(f"Incomplete uploaded asset: {name}")
                 if item.get("digest") and item["digest"] != "sha256:" + expected["sha256"]:
                     raise ValueError(f"Uploaded checksum mismatch: {name}")
+                if not item.get("digest"):
+                    downloaded = gh("api", f"repos/{repo}/releases/assets/{item['id']}",
+                                    "-H", "Accept: application/octet-stream")
+                    verify(downloaded, expected, f"Uploaded release asset {name}")
 
             remote = api(f"repos/{repo}/releases/{remote['id']}", method="PATCH",
                          body={**metadata, "draft": False})
