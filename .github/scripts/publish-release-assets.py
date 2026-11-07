@@ -140,7 +140,12 @@ def main() -> None:
                     prior = current[name]
                     data = gh("api", f"repos/{repo}/releases/assets/{prior['id']}",
                               "-H", "Accept: application/octet-stream")
-                    verify(data, item, f"Existing release asset {name}")
+                    if name in {"README.md", "SHA256SUMS.txt"} and (len(data) != item["size"] or digest(data) != item["sha256"]):
+                        # Documentation and checksums evolve as variants are added.
+                        # Binary assets remain immutable and must match exactly.
+                        gh("release", "upload", release["tag"], str(directory / name), "--clobber", "--repo", repo)
+                    else:
+                        verify(data, item, f"Existing release asset {name}")
                     continue
                 gh("release", "upload", release["tag"], str(directory / name), "--repo", repo)
 

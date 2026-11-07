@@ -3,73 +3,74 @@
   "repository": "TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-",
   "releases": [
     {
-      "title": "DiRT 3 \u2014 TU and unlocked FPS game-folder files",
+      "title": "DiRT 3 \u2014 TU unlocked, VSync and A limiter variants",
       "tag": "dirt3-tu-gamefolder-test-1",
       "prerelease": true,
-      "notes": "DiRT 3 original-release TU and FPS files for a complete extracted game folder launched through Neighborhood.\n\nTitle ID: `434D083D` \u00b7 Media ID: `75036F79` \u00b7 Executable version: `0.0.1.3`.\n\n### Assets\n\n- `Dirt3_TU_clean_gamefolder_control.xex`: TU merged and local update-data lookup; no FPS edits.\n- `Dirt3_TU_unlocked_gamefolder.xex`: the same baseline with both published FPS edits.\n- `patch.nfs`: unchanged matching TU data, required beside the XEX.\n- `Dirt3_TU_gamefolder_test.zip`: both XEXs, update data, instructions and verification record.\n- `SHA256SUMS.txt`: checksums for the individual files.\n\nBoth candidates redirect the update-data filesystem prefix from `update:` to `game:`. Copy both XEXs and `patch.nfs` beside the untouched original `default.xex` in the complete extracted game folder. Launch the control through Neighborhood first, then the unlocked version if the control loads.\n\n### Console feedback and reproduction\n\nThe contributor reports that the original-release unlocked XEX works on the RGH console. The earlier TU-unlocked file showed \u201cThis disc is unreadable\u201d through Neighborhood. These game-folder variants add the local update-data path revision; no further console result has been recorded for their exact hashes. This is not a claim that the original error has been resolved.\n\nThe earlier failing XEX was independently reproduced byte for byte from the uploaded original, TU and guide edits. Both long signatures matched once. The new candidates passed exact dumped-payload checks. All 25 compressed blocks in patch.nfs matched their stored checksums; its build number matches the executable.\n\nFor GOD conversion after extracted-folder testing, use ISO2GOD Next's XEX-folder input directly. Older ISO2GOD versions can use an ISO rebuilt from the complete modified game folder. See the repository README for both methods.\n\nZIP SHA-256: `1365bf498c3bbed5be6475481fc60dce79688abce26e74d8d29395713d6d06b6`.\n",
+      "notes": "# DiRT 3 \u2014 TU game-folder variants\n\n**Try `Dirt3_TU_vsync60_A.xex` FIRST**, as requested by the contributor.\n\nOriginal release only: Title ID `434D083D`, Media ID `75036F79`, updated executable version `0.0.1.3`. These files are not for the GOTY executable with Media ID `32E5D1A4`.\n\n## Downloads and variants\n\nDownload `Dirt3_TU_FPS_variants.zip` for all three FPS variants, the clean control, matching `patch.nfs`, installation instructions and verification hashes. XEXs and `patch.nfs` are also separate release assets.\n\n- **A \u2014 recommended first:** `Dirt3_TU_vsync60_A.xex`, supplied by the contributor unchanged. VSync instruction `39 60 00 01` at file offset `0x6302C0`, plus the guide's second patch `C0 23 04 FC` \u2192 `60 00 00 00` at `0x5E2C50`. The second edit is described as a possible game-limiter change; its precise runtime effect is not established by the instruction alone.\n- **Plain VSync comparison:** `Dirt3_TU_vsync60.xex`, derived from the supplied A by restoring only `C0 23 04 FC` at `0x5E2C50`. All other bytes, including A's container headers, are preserved. This is a comparison build, not a separately supplied console result.\n- **Unlocked:** `Dirt3_TU_unlocked_gamefolder.xex`, the previously published game-folder build with both guide FPS edits and unlocked presentation; tearing can occur.\n- **Clean control:** `Dirt3_TU_clean_gamefolder_control.xex`, the previous TU-merged game-folder control without the FPS edits.\n\n\u201cvsync60\u201d describes intended synchronized presentation at 60 Hz, not a promise of sustained 60 FPS.\n\n## Installation with patch.nfs\n\n1. Back up your complete extracted DiRT 3 game folder and its original `default.xex`.\n2. Extract the ZIP on your PC. These downloads do not include the complete game data.\n3. Start with **A**. Copy `Dirt3_TU_vsync60_A.xex` into the complete game folder, rename the selected copy to `default.xex`, and place the supplied **`patch.nfs` in that same folder beside it**. Keep all original game files and subfolders.\n4. Launch that `default.xex` through Neighborhood or your usual launcher. Do not put the XEX or `patch.nfs` inside a TU/STFS container; no rebuilt title-update package is supplied.\n5. To compare variants, fully exit the game, replace only `default.xex` with the chosen variant, and keep the same matching `patch.nfs` beside it. Use the clean control if investigating a launch failure.\n6. After confirming the complete extracted installation works, ISO2GOD Next can convert the full folder directly using its XEX-folder option. Older ISO2GOD versions require a rebuilt ISO. Conversion of this particular set has no separately recorded outcome.\n\nThe supplied A contains the local `game:` update-data path; it needs the accompanying `patch.nfs`. That file is unchanged from the matching TU: SHA-256 `ab5508f711d2124afb4bd87595043a6f50c1c9d1a5139e8d6492db8b523df0b9`. All 25 compressed data blocks were previously checksum-verified.\n\n## Recorded console history\n\nThe contributor reports that the original-release unlocked game works. An earlier TU-unlocked build produced \u201cThis disc is unreadable\u201d; that historical build is distinct from the local-data game-folder candidates. File comparisons and header inspection establish file contents, not a new console result. Use A first and report behavior for the selected variant.\n",
       "source": {
-        "size": 17773756,
-        "sha256": "1365bf498c3bbed5be6475481fc60dce79688abce26e74d8d29395713d6d06b6",
-        "blob_sha": "7b87e032c11f7b785ead0c38fa3277990522ec6c"
+        "size": 34155099,
+        "sha256": "fab3d2ccf579e63c890c11a206cb14ece15f3568a39cb8e3b4a8d9134632c6bb",
+        "blob_sha": "220559c051a22ed66c2eb814f7086efa9de85da0"
       },
       "assets": [
         {
-          "archive_path": "Dirt3_TU_gamefolder_test/Dirt3_TU_clean_gamefolder_control.xex",
-          "name": "Dirt3_TU_clean_gamefolder_control.xex",
-          "size": 18071552,
-          "sha256": "11a26d6145b93d43aabba06a2e922896ee4f84c2f14b8d058e196a71198d22c1"
-        },
-        {
-          "archive_path": "Dirt3_TU_gamefolder_test/Dirt3_TU_unlocked_gamefolder.xex",
+          "archive_path": "Dirt3_TU_unlocked_gamefolder.xex",
           "name": "Dirt3_TU_unlocked_gamefolder.xex",
           "size": 18071552,
           "sha256": "39e68e2500bfe765917c977fa347f2c0db151cc7d360c50eda2a1abd6e7c784d"
         },
         {
-          "archive_path": "Dirt3_TU_gamefolder_test/patch.nfs",
+          "archive_path": "Dirt3_TU_clean_gamefolder_control.xex",
+          "name": "Dirt3_TU_clean_gamefolder_control.xex",
+          "size": 18071552,
+          "sha256": "11a26d6145b93d43aabba06a2e922896ee4f84c2f14b8d058e196a71198d22c1"
+        },
+        {
+          "archive_path": "patch.nfs",
           "name": "patch.nfs",
           "size": 1441792,
           "sha256": "ab5508f711d2124afb4bd87595043a6f50c1c9d1a5139e8d6492db8b523df0b9"
+        },
+        {
+          "archive_path": "Dirt3_TU_vsync60_A.xex",
+          "name": "Dirt3_TU_vsync60_A.xex",
+          "size": 18071552,
+          "sha256": "37e6ddd9037a5c5925a616b363662bdb4840216bf8ce3db165b3f5c8ea0d3e77"
+        },
+        {
+          "archive_path": "Dirt3_TU_vsync60.xex",
+          "name": "Dirt3_TU_vsync60.xex",
+          "size": 18071552,
+          "sha256": "306e4839474da47221be97f21bf84698950756050a3f2b2e561f3ec4137ab08b"
         }
       ],
-      "archive_asset_name": "Dirt3_TU_gamefolder_test.zip"
+      "archive_asset_name": "Dirt3_TU_FPS_variants.zip"
     },
     {
       "title": "Rainbow Six Vegas 2 \u2014 unlocked FPS and V-sync files",
       "tag": "rsv2-fps-files-1",
       "prerelease": false,
-      "notes": "# Rainbow Six Vegas 2 \u2014 unlocked framerate and vsync variants\n\nFor **RGH/JTAG Xbox 360 consoles**, title ID **55530807**, media ID **1982EE1E**. These XEX files are not re-signed.\n\nDownload one of the three separate assets in this release:\n\n| Asset | Build | Presentation behavior |\n| --- | --- | --- |\n| RSV2_base_unlocked.xex | Base v00000001 | Unlocked presentation; tearing can occur |\n| RSV2_TU_unlocked.xex | Matching TU executable merged, v00000201 | Unlocked presentation; tearing can occur |\n| RSV2_TU_vsync60.xex | Matching TU executable merged, v00000201 | One-refresh vsync interval; a 60 FPS presentation ceiling on a 60 Hz display |\n\nThe user reports that unlocked RSV2 runs with the title update and benefits in smaller Terrorist Hunt maps. The user also reports that vsync reduces tearing. These observations do not establish a measured or sustained 60 FPS result, and the exact tested file hashes were not recorded.\n\nBack up your original `default.xex`. Choose the asset matching your game/update setup, rename it to `default.xex`, and place it in the game folder. Keep the matching game/update installation: the TU assets include the merged executable changes, preserve `UPDATE:` paths, and are not a complete update package.\n\nAll three assets match the previously verified files byte for byte. Their only changes from the clean normalized or TU-merged executable are the documented presentation instructions.\n\n| Asset | SHA-256 |\n| --- | --- |\n| RSV2_base_unlocked.xex | ae59051dc3d88d50a16e545602ac947e3c965d52e78aceeec6c2b7642bad1768 |\n| RSV2_TU_unlocked.xex | f535cfefac0e8270ae1186a1a06e07096bdb97d3f296d0404452cee5d82a2c53 |\n| RSV2_TU_vsync60.xex | 27c4838ffc0ce54caea6cec88bc745ac09012438e0b45e99f8772b6f1c89841c |\n",
+      "notes": "# Rainbow Six Vegas 2 \u2014 unlocked framerate and vsync variants\n\nFor **RGH/JTAG Xbox 360 consoles**, title ID **55530807**, media ID **1982EE1E**. These XEX files are not re-signed.\n\nDownload one of the three separate assets in this release:\n\n| Asset | Build | Presentation behavior |\n| --- | --- | --- |\n| RSV2_base_unlocked.xex | Base v00000001 | Unlocked presentation; tearing can occur |\n| RSV2_TU_unlocked.xex | Matching TU executable merged, v00000201 | Unlocked presentation; tearing can occur |\n| RSV2_TU_vsync60.xex | Matching TU executable merged, v00000201 | One-refresh vsync interval; a 60 FPS presentation ceiling on a 60 Hz display |\n\nThe user reports that unlocked RSV2 runs with the title update and benefits in smaller Terrorist Hunt maps. The user also reports that vsync reduces tearing. These observations do not establish a measured or sustained 60 FPS result, and the exact tested file hashes were not recorded.\n\nBack up your original `default.xex`. Choose the asset matching your game/update setup, rename it to `default.xex`, and place it in the game folder. Keep the matching game/update installation: the TU assets include the merged executable changes, preserve `UPDATE:` paths, and are not a complete update package.\n\nAll three assets match the previously verified files byte for byte. Their only changes from the clean normalized or TU-merged executable are the documented presentation instructions.\n\n| Asset | SHA-256 |\n| --- | --- |\n| RSV2_base_unlocked.xex | ae59051dc3d88d50a16e545602ac947e3c965d52e78aceeec6c2b7642bad1768 |\n| RSV2_TU_unlocked.xex | f535cfefac0e8270ae1186a1a06e07096bdb97d3f296d0404452cee5d82a2c53 |\n| RSV2_TU_vsync60.xex | 27c4838ffc0ce54caea6cec88bc745ac09012438e0b45e99f8772b6f1c89841c |\n\n## Complete Edition Europe \u2014 Streets and intro-skip variant\n\n`RSV2_Streets_vsync60_skipall_shortflash.xex` is supplied for **Complete Edition Europe**, Title ID `55530807`, **Media ID `47D7F6C0`**, executable version `0.0.0.6`. It is a different build from the older `1982EE1E` assets above; do not interchange them.\n\nContributor-reported features and behavior:\n\n- Adds access to the exclusive **Streets** map whose original distribution service was shut down. Use the matching Complete Edition game data; the XEX alone does not supply map assets.\n- VSync presentation and intro skipping. Startup is reported to fall from approximately **32 seconds to 21 seconds**.\n- Known downside: the **dark variant of CQC Training is laggy**.\n\nBack up your Complete Edition `default.xex`, copy this variant into that complete extracted game folder and rename the selected copy to `default.xex`. Fully exit and relaunch. Keep the matching game assets. The contributor's feature and timing reports are distinct from the header/hash inspection performed here.\n\n`RSV2_Complete_Europe_Streets_intro_skip.zip` packages this XEX with these installation notes and its checksum.\n",
       "source": {
-        "size": 27151312,
-        "sha256": "0a465a59023f5028e1fff9b0d8487ee4c51db47988e0d61d34d8c9205cd5701e",
-        "blob_sha": "a985af816b51870c7dfc9193d4f1738320c74159"
+        "size": 7993613,
+        "sha256": "8e4d151689d35cf12f267b86205d1d1e28019762f4261b20f573d7c363c0d291",
+        "blob_sha": "8777fdc17fa4c536503ddace6e6f3d54249dba4e"
       },
       "assets": [
         {
-          "archive_path": "Rainbow Six Vegas 2/RSV2_TU_unlocked.xex",
-          "name": "RSV2_TU_unlocked.xex",
-          "size": 24690688,
-          "sha256": "f535cfefac0e8270ae1186a1a06e07096bdb97d3f296d0404452cee5d82a2c53"
-        },
-        {
-          "archive_path": "Rainbow Six Vegas 2/RSV2_TU_vsync60.xex",
-          "name": "RSV2_TU_vsync60.xex",
-          "size": 24690688,
-          "sha256": "27c4838ffc0ce54caea6cec88bc745ac09012438e0b45e99f8772b6f1c89841c"
-        },
-        {
-          "archive_path": "Rainbow Six Vegas 2/RSV2_base_unlocked.xex",
-          "name": "RSV2_base_unlocked.xex",
-          "size": 24625152,
-          "sha256": "ae59051dc3d88d50a16e545602ac947e3c965d52e78aceeec6c2b7642bad1768"
+          "archive_path": "RSV2_Streets_vsync60_skipall_shortflash.xex",
+          "name": "RSV2_Streets_vsync60_skipall_shortflash.xex",
+          "size": 7993344,
+          "sha256": "5d3f5a23aaf482ebb1313a52db534de1bb14a7d1604b6f18500047286a6544eb"
         }
-      ]
+      ],
+      "archive_asset_name": "RSV2_Complete_Europe_Streets_intro_skip.zip"
     },
     {
       "title": "Bully: Scholarship Edition \u2014 unlocked FPS and V-sync files",
       "tag": "bully-fps-files-1",
       "prerelease": false,
-      "notes": "# Bully: Scholarship Edition \u2014 Xbox 360 FPS variants\n\nModified XEX files for an RGH/JTAG Xbox 360, for title `5454081A`, media\n`0867AD86` (North America). Console testing is reported by the user; FPS was not\nindependently benchmarked in the file audit.\n\n| Download | Build | Behavior |\n| --- | --- | --- |\n| `Bully_base_unlocked.xex` | Base v1 (`00000001`) | Vsync off; unlocked presentation with possible tearing |\n| `Bully_TU_unlocked.xex` | Updated v0.0.1.1 (`00000101`) | Vsync off; unlocked presentation with possible tearing |\n| `Bully_TU_vsync60.xex` | Updated v0.0.1.1 (`00000101`) | Interval 1, intended for vsync at 60 Hz |\n\nChoose one matching your game build. Back up `default.xex`, copy the chosen file\ninto the game folder, and rename it to `default.xex`. Keep the backup to restore\nthe original. The updated executables are supplied as complete files; their\nhistorical provenance records matching TU package\n`TU_1A5820Q_0000004000000.0000000000081` merged into the executable. Do not assume\ncompatibility with a different media ID or layer an unrelated TU over them.\n\nThese patches change frame presentation behavior. Actual FPS depends on the\ngame's workload; \u201cvsync60\u201d does not promise a steady 60 FPS.\n\nThe audit verified the supplied asset hashes, title/media/version metadata and\nnative images. The updated unlocked/vsync files have identical headers and differ\nby exactly five bytes: the interval-load instruction and the unlock mask byte.\nThe archive did not include an original executable or TU package, so its original\npatching and update merge were not independently reproduced.\n\nSHA-256 checksums (each XEX is 14,987,264 bytes):\n\n```text\n1bbc924b1c8b374c1b97d744af8cc721622f26dd22e9aa042f217833ac1e1416  Bully_base_unlocked.xex\nac5f72bd41a64d5ca60b08e6e9e3bd182dd61efe37623456e9814e1f733b72cd  Bully_TU_unlocked.xex\na9ee087eb3eb6aaa018ae8696bfcf8704cdce1a55b8b81108f577b9bbea6237a  Bully_TU_vsync60.xex\n```\n",
+      "notes": "# Bully: Scholarship Edition \u2014 Xbox 360 FPS variants\n\nModified XEX files for an RGH/JTAG Xbox 360, for title `5454081A`, media\n`0867AD86` (North America). Console testing is reported by the user; FPS was not\nindependently benchmarked in the file audit.\n\n| Download | Build | Behavior |\n| --- | --- | --- |\n| `Bully_base_unlocked.xex` | Base v1 (`00000001`) | Vsync off; unlocked presentation with possible tearing |\n| `Bully_TU_unlocked.xex` | Updated v0.0.1.1 (`00000101`) | Vsync off; unlocked presentation with possible tearing |\n| `Bully_TU_vsync60.xex` | Updated v0.0.1.1 (`00000101`) | Interval 1, intended for vsync at 60 Hz |\n\nChoose one matching your game build. Back up `default.xex`, copy the chosen file\ninto the game folder, and rename it to `default.xex`. Keep the backup to restore\nthe original. The updated executables are supplied as complete files; their\nhistorical provenance records matching TU package\n`TU_1A5820Q_0000004000000.0000000000081` merged into the executable. Do not assume\ncompatibility with a different media ID or layer an unrelated TU over them.\n\nThese patches change frame presentation behavior. Actual FPS depends on the\ngame's workload; \u201cvsync60\u201d does not promise a steady 60 FPS.\n\nThe audit verified the supplied asset hashes, title/media/version metadata and\nnative images. The updated unlocked/vsync files have identical headers and differ\nby exactly five bytes: the interval-load instruction and the unlock mask byte.\nThe archive did not include an original executable or TU package, so its original\npatching and update merge were not independently reproduced.\n\nSHA-256 checksums (each XEX is 14,987,264 bytes):\n\n```text\n1bbc924b1c8b374c1b97d744af8cc721622f26dd22e9aa042f217833ac1e1416  Bully_base_unlocked.xex\nac5f72bd41a64d5ca60b08e6e9e3bd182dd61efe37623456e9814e1f733b72cd  Bully_TU_unlocked.xex\na9ee087eb3eb6aaa018ae8696bfcf8704cdce1a55b8b81108f577b9bbea6237a  Bully_TU_vsync60.xex\n```\n\n## Important: extracted-folder installation only\n\n**Bully is not GOD-friendly. Do not convert these modified Bully builds to GOD**, including through ISO2GOD Next. Keep and launch the complete extracted game folder. This game-specific restriction takes precedence over the repository's general GOD conversion instructions.\n",
       "source": {
         "size": 17049284,
         "sha256": "fc956537c074713f8c0024e612980c637149684912e919bb1521d1c6966026b8",

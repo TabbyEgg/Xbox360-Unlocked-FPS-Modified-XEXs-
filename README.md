@@ -14,7 +14,15 @@ Match the release's Title ID, Media ID, executable version, and title-update req
 | Bully: Scholarship Edition | `5454081A` | `0867AD86` |
 | DiRT 3, original release | `434D083D` | `75036F79` |
 
+| Rainbow Six Vegas 2, Complete Edition Europe / Streets variant | `55530807` | `47D7F6C0` |
+
 Other releases or updates may require different files.
+
+**Bully is not GOD-friendly: do not convert the modified Bully files to GOD. Use the complete extracted game folder.** This exception applies to both conversion methods below.
+
+DiRT 3: download `Dirt3_TU_FPS_variants.zip` and **try the A variant first**. Put its matching `patch.nfs` beside the selected executable, renamed `default.xex`, in the complete extracted game folder. See the DiRT 3 release for full instructions.
+
+RSV2 Complete Edition Europe: the Streets/intro-skip variant is separate from the older Media ID `1982EE1E` builds. The contributor reports Streets access and startup reduced from about 32 to 21 seconds; the dark CQC Training variant is laggy.
 
 ## Extract an ISO to get the XEX
 
