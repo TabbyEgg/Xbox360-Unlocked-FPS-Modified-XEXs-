@@ -156,16 +156,28 @@ Use matching Complete Edition Europe game data, including the map assets. Street
 | `RSV2_Streets_vsync60_skipall_shortflash.xex` | `5d3f5a23aaf482ebb1313a52db534de1bb14a7d1604b6f18500047286a6544eb` |
 
 
-## Variants, pros and cons
+## Complete Edition Europe compared with normal RSV2
 
-Both files target Complete Edition Europe: Title ID `55530807`, Media ID `47D7F6C0`, version `0.0.0.6`. Both retain the contributor-reported Streets access and VSync behavior. The absent **Exclusive Content tab** is a menu difference; it does not mean Streets map access is absent. These behavior notes are supplied by the contributor, not inferred from the filenames or header inspection.
+This comparison is against the normal RSV2 build in the separate original-edition release—not between the two Complete Edition executables. Normal build Media ID: `1982EE1E`; Complete Edition Europe Media ID: `47D7F6C0` (v0.0.0.6). Both have Title ID `55530807` and require their matching game data.
 
-| Asset | Intro behavior | Pros | Cons / differences |
-| --- | --- | --- | --- |
-| `RSV2_Streets_vsync60.xex` | No intro skipping; normal intro sequence | Streets access; VSync; keeps the normal startup sequence | No startup-time saving; no Exclusive Content tab; dark CQC Training variant reportedly drops to ~10–15 FPS during gameplay |
-| `RSV2_Streets_vsync60_skipall_shortflash.xex` | Intro skip with short flash | Streets access; VSync; reported startup ~32 → 21 seconds | Brief startup flash; no Exclusive Content tab; dark CQC Training variant reportedly drops to ~10–15 FPS during gameplay |
+| Type | Complete Edition Europe difference from normal RSV2 |
+| --- | --- |
+| **Pro: Streets access** | Adds access to the exclusive Streets map whose original distribution service was shut down. The matching Complete Edition map assets are required. |
+| **Pro: optional faster startup** | The intro-skip file reduces reported startup from about **32 to 21 seconds**. The no-skip file retains normal intros. |
+| **Con: missing menu tab** | **No Exclusive Content tab**, unlike the normal version. This menu difference does not mean the Streets map is missing. |
+| **Con: dark CQC Training performance** | The dark CQC Training variant reportedly drops to around **10–15 FPS during gameplay**. No matching normal-version FPS measurement is supplied. |
+| Shared feature, not an edition advantage | Both releases offer VSync variants. VSync is not an exclusive Complete Edition benefit and does not guarantee sustained 60 FPS. |
 
-The Exclusive Content tab and dark CQC Training notes describe the supplied Complete Edition setup; no separate outcome for each exact file hash has been recorded. VSync does not guarantee sustained 60 FPS.
+Map access, startup timing, menu differences and the CQC Training FPS range are contributor-reported console observations.
+
+### Choose a Complete Edition file
+
+| Asset | Intro behavior |
+| --- | --- |
+| `RSV2_Streets_vsync60.xex` | Normal intro sequence; no intro skip. |
+| `RSV2_Streets_vsync60_skipall_shortflash.xex` | Intro skip with a brief flash; reported startup ~32 → 21 seconds. |
+
+Both files target the same Complete Edition Europe build and include the supplied Streets/VSync changes. Intro skipping is the choice between them; the edition comparison above applies to the supplied Complete Edition setup.
 
 Download `RSV2_Complete_Europe_Streets_variants.zip` for both executables, installation notes and hashes. Back up your original `default.xex`, select one variant, copy it into the matching complete extracted game folder and rename the selected copy to `default.xex`. Keep the matching map/game assets and fully restart the game when switching variants.
 
