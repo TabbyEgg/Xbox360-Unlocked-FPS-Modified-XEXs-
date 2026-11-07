@@ -67,6 +67,90 @@ The collection includes examples with console-test results reported by the contr
 
 Observed results apply to the tested build and setup.
 
+## Files by game
+
+The tables describe file contents and intended presentation behavior. A 60 Hz presentation ceiling does not guarantee sustained 60 FPS. Console observations are recorded in the individual releases.
+
+### DiRT 3 — original release
+
+<img src="assets/covers/dirt3.png" alt="DiRT 3 — original release cover" width="180">
+
+[Open release and downloads](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/tag/dirt3-tu-gamefolder-test-1) · Title ID `434D083D` · Media ID `75036F79`
+
+| Asset | Build | Presentation behavior / purpose |
+| --- | --- | --- |
+| [Dirt3_TU_vsync60_A.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/dirt3-tu-gamefolder-test-1/Dirt3_TU_vsync60_A.xex) | TU v0.0.1.3 | **Try first.** VSync plus the guide’s second NOP edit; possible limiter effect. |
+| [Dirt3_TU_vsync60.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/dirt3-tu-gamefolder-test-1/Dirt3_TU_vsync60.xex) | TU v0.0.1.3; derived comparison | VSync; A’s second guide edit restored to its original instruction. |
+| [Dirt3_TU_unlocked_gamefolder.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/dirt3-tu-gamefolder-test-1/Dirt3_TU_unlocked_gamefolder.xex) | TU v0.0.1.3 | Unlocked presentation; tearing can occur. |
+| [Dirt3_TU_clean_gamefolder_control.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/dirt3-tu-gamefolder-test-1/Dirt3_TU_clean_gamefolder_control.xex) | TU v0.0.1.3 | Clean control with local update-data lookup; no FPS edits. |
+| [patch.nfs](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/dirt3-tu-gamefolder-test-1/patch.nfs) | Matching original-release TU data | Required beside the chosen XEX; included in the variants ZIP. |
+
+**Use A first.** Download `Dirt3_TU_FPS_variants.zip`; copy the selected XEX as `default.xex` and put `patch.nfs` beside it in the complete extracted game folder. The supplied A is unchanged; plain VSync is a derived comparison.
+
+| Asset | SHA-256 |
+| --- | --- |
+| `Dirt3_TU_unlocked_gamefolder.xex` | `39e68e2500bfe765917c977fa347f2c0db151cc7d360c50eda2a1abd6e7c784d` |
+| `Dirt3_TU_clean_gamefolder_control.xex` | `11a26d6145b93d43aabba06a2e922896ee4f84c2f14b8d058e196a71198d22c1` |
+| `patch.nfs` | `ab5508f711d2124afb4bd87595043a6f50c1c9d1a5139e8d6492db8b523df0b9` |
+| `Dirt3_TU_vsync60_A.xex` | `37e6ddd9037a5c5925a616b363662bdb4840216bf8ce3db165b3f5c8ea0d3e77` |
+| `Dirt3_TU_vsync60.xex` | `306e4839474da47221be97f21bf84698950756050a3f2b2e561f3ec4137ab08b` |
+
+### Rainbow Six Vegas 2 — original build
+
+<img src="assets/covers/rsv2.png" alt="Rainbow Six Vegas 2 — original build cover" width="180">
+
+[Open release and downloads](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/tag/rsv2-fps-files-1) · Title ID `55530807` · Media ID `1982EE1E`
+
+| Asset | Build | Presentation behavior / purpose |
+| --- | --- | --- |
+| [RSV2_base_unlocked.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/rsv2-fps-files-1/RSV2_base_unlocked.xex) | Base v00000001 | Unlocked presentation; tearing can occur. |
+| [RSV2_TU_unlocked.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/rsv2-fps-files-1/RSV2_TU_unlocked.xex) | Matching TU merged, v00000201 | Unlocked presentation; tearing can occur. |
+| [RSV2_TU_vsync60.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/rsv2-fps-files-1/RSV2_TU_vsync60.xex) | Matching TU merged, v00000201 | One-refresh VSync interval; 60 FPS presentation ceiling on a 60 Hz display. |
+
+The TU executables preserve `UPDATE:` paths and require the matching game/update setup. They are not complete update packages. The contributor reports unlocked play with the TU active and reduced tearing with VSync.
+
+| Asset | SHA-256 |
+| --- | --- |
+| `RSV2_TU_unlocked.xex` | `f535cfefac0e8270ae1186a1a06e07096bdb97d3f296d0404452cee5d82a2c53` |
+| `RSV2_TU_vsync60.xex` | `27c4838ffc0ce54caea6cec88bc745ac09012438e0b45e99f8772b6f1c89841c` |
+| `RSV2_base_unlocked.xex` | `ae59051dc3d88d50a16e545602ac947e3c965d52e78aceeec6c2b7642bad1768` |
+
+### Bully: Scholarship Edition
+
+<img src="assets/covers/bully.jpg" alt="Bully: Scholarship Edition cover" width="180">
+
+[Open release and downloads](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/tag/bully-fps-files-1) · Title ID `5454081A` · Media ID `0867AD86`
+
+| Asset | Build | Presentation behavior / purpose |
+| --- | --- | --- |
+| [Bully_base_unlocked.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/bully-fps-files-1/Bully_base_unlocked.xex) | Base v00000001 | VSync off; unlocked presentation with possible tearing. |
+| [Bully_TU_unlocked.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/bully-fps-files-1/Bully_TU_unlocked.xex) | TU v00000101 | VSync off; unlocked presentation with possible tearing. |
+| [Bully_TU_vsync60.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/bully-fps-files-1/Bully_TU_vsync60.xex) | TU v00000101 | One-refresh VSync interval, intended for 60 Hz presentation. |
+
+**Extracted game folder only. Bully is not GOD-friendly; do not convert these modified builds to GOD.**
+
+| Asset | SHA-256 |
+| --- | --- |
+| `Bully_base_unlocked.xex` | `1bbc924b1c8b374c1b97d744af8cc721622f26dd22e9aa042f217833ac1e1416` |
+| `Bully_TU_vsync60.xex` | `a9ee087eb3eb6aaa018ae8696bfcf8704cdce1a55b8b81108f577b9bbea6237a` |
+| `Bully_TU_unlocked.xex` | `ac5f72bd41a64d5ca60b08e6e9e3bd182dd61efe37623456e9814e1f733b72cd` |
+
+### Rainbow Six Vegas 2 — Complete Edition Europe
+
+<img src="assets/covers/rsv2-complete-europe.png" alt="Rainbow Six Vegas 2 — Complete Edition Europe cover" width="180">
+
+[Open release and downloads](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/tag/rsv2-complete-europe-streets-1) · Title ID `55530807` · Media ID `47D7F6C0`
+
+| Asset | Build | Presentation behavior / purpose |
+| --- | --- | --- |
+| [RSV2_Streets_vsync60_skipall_shortflash.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/rsv2-complete-europe-streets-1/RSV2_Streets_vsync60_skipall_shortflash.xex) | Complete Edition Europe v0.0.0.6 | VSync, Streets access and intro skip; reported startup ~32 → 21 seconds. Dark CQC Training variant is laggy. |
+
+Use matching Complete Edition Europe game data, including the map assets. Streets access, intro timing and the dark CQC Training performance issue are contributor-reported. This build is separate from Media ID `1982EE1E`.
+
+| Asset | SHA-256 |
+| --- | --- |
+| `RSV2_Streets_vsync60_skipall_shortflash.xex` | `5d3f5a23aaf482ebb1313a52db534de1bb14a7d1604b6f18500047286a6544eb` |
+
 ## Patch provenance and file checks
 
 Release notes credit the supplied game-specific guides and record exact edits and hashes. Long byte signatures are used to identify matching code. Instructions and offsets for one executable build must be checked again against another build.
