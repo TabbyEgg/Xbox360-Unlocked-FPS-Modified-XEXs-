@@ -112,13 +112,19 @@
       "title": "Rainbow Six Vegas 2 \u2014 Complete Edition Europe, Streets + VSync + intro skip",
       "tag": "rsv2-complete-europe-streets-1",
       "prerelease": false,
-      "notes": "<img src=\"https://raw.githubusercontent.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/main/assets/covers/rsv2-complete-europe.png\" alt=\"Rainbow Six Vegas 2 Complete Edition Europe cover\" width=\"280\">\n\n# Rainbow Six Vegas 2 \u2014 Complete Edition Europe\n\n`RSV2_Streets_vsync60_skipall_shortflash.xex` is supplied for **Complete Edition Europe**, Title ID `55530807`, **Media ID `47D7F6C0`**, executable version `0.0.0.6`. It is a different build from the older `1982EE1E` assets in the separate original-edition release; do not interchange them.\n\nContributor-reported features and behavior:\n\n- Adds access to the exclusive **Streets** map whose original distribution service was shut down. Use the matching Complete Edition game data; the XEX alone does not supply map assets.\n- VSync presentation and intro skipping. Startup is reported to fall from approximately **32 seconds to 21 seconds**.\n- Known downside: the **dark variant of CQC Training is laggy**.\n\nBack up your Complete Edition `default.xex`, copy this variant into that complete extracted game folder and rename the selected copy to `default.xex`. Fully exit and relaunch. Keep the matching game assets. The contributor's feature and timing reports are distinct from the header/hash inspection performed here.\n\n`RSV2_Complete_Europe_Streets_intro_skip.zip` packages this XEX with these installation notes and its checksum.\n\nThe ZIP includes the supplied XEX unchanged, its SHA-256 and installation notes. Its enclosed notes also describe the older builds for context; only the Complete Edition Europe XEX is packaged in this ZIP.\n",
+      "notes": "<img src=\"https://raw.githubusercontent.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/main/assets/covers/rsv2-complete-europe.png\" alt=\"Rainbow Six Vegas 2 Complete Edition Europe cover\" width=\"280\">\n\n# Rainbow Six Vegas 2 \u2014 Complete Edition Europe\n\n`RSV2_Streets_vsync60_skipall_shortflash.xex` is supplied for **Complete Edition Europe**, Title ID `55530807`, **Media ID `47D7F6C0`**, executable version `0.0.0.6`. It is a different build from the older `1982EE1E` assets in the separate original-edition release; do not interchange them.\n\nContributor-reported features and behavior:\n\n- Adds access to the exclusive **Streets** map whose original distribution service was shut down. Use the matching Complete Edition game data; the XEX alone does not supply map assets.\n- VSync presentation and intro skipping. Startup is reported to fall from approximately **32 seconds to 21 seconds**.\n- Known downside: the **dark variant of CQC Training is laggy**.\n\nBack up your Complete Edition `default.xex`, copy this variant into that complete extracted game folder and rename the selected copy to `default.xex`. Fully exit and relaunch. Keep the matching game assets. The contributor's feature and timing reports are distinct from the header/hash inspection performed here.\n\n`RSV2_Complete_Europe_Streets_intro_skip.zip` packages this XEX with these installation notes and its checksum.\n\nThe ZIP includes the supplied XEX unchanged, its SHA-256 and installation notes. Its enclosed notes also describe the older builds for context; only the Complete Edition Europe XEX is packaged in this ZIP.\n\n## Variants, pros and cons\n\nBoth files target Complete Edition Europe: Title ID `55530807`, Media ID `47D7F6C0`, version `0.0.0.6`. Both retain the contributor-reported Streets access and VSync behavior. The absent **Exclusive Content tab** is a menu difference; it does not mean Streets map access is absent. These behavior notes are supplied by the contributor, not inferred from the filenames or header inspection.\n\n| Asset | Intro behavior | Pros | Cons / differences |\n| --- | --- | --- | --- |\n| `RSV2_Streets_vsync60.xex` | No intro skipping; normal intro sequence | Streets access; VSync; keeps the normal startup sequence | No startup-time saving; no Exclusive Content tab; dark CQC Training variant is laggy |\n| `RSV2_Streets_vsync60_skipall_shortflash.xex` | Intro skip with short flash | Streets access; VSync; reported startup ~32 \u2192 21 seconds | Brief startup flash; no Exclusive Content tab; dark CQC Training variant is laggy |\n\nThe Exclusive Content tab and dark CQC Training notes describe the supplied Complete Edition setup; no separate outcome for each exact file hash has been recorded. VSync does not guarantee sustained 60 FPS.\n\nDownload `RSV2_Complete_Europe_Streets_variants.zip` for both executables, installation notes and hashes. Back up your original `default.xex`, select one variant, copy it into the matching complete extracted game folder and rename the selected copy to `default.xex`. Keep the matching map/game assets and fully restart the game when switching variants.\n",
       "source": {
-        "size": 7993613,
-        "sha256": "8e4d151689d35cf12f267b86205d1d1e28019762f4261b20f573d7c363c0d291",
-        "blob_sha": "8777fdc17fa4c536503ddace6e6f3d54249dba4e"
+        "size": 15985423,
+        "sha256": "3d36bad62e72964a9e7f49d8aa33675fd74e03e65aa78da28b6940e7c483b801",
+        "blob_sha": "63b9938396a7c78c974a44fb96493e368dd43cd5"
       },
       "assets": [
+        {
+          "archive_path": "RSV2_Streets_vsync60.xex",
+          "name": "RSV2_Streets_vsync60.xex",
+          "size": 7993344,
+          "sha256": "49d18ee6f96352ecc80ba9e3c7598c3da3075aaeeb8302e8bb78bb91e2d469ce"
+        },
         {
           "archive_path": "RSV2_Streets_vsync60_skipall_shortflash.xex",
           "name": "RSV2_Streets_vsync60_skipall_shortflash.xex",
@@ -126,7 +132,7 @@
           "sha256": "5d3f5a23aaf482ebb1313a52db534de1bb14a7d1604b6f18500047286a6544eb"
         }
       ],
-      "archive_asset_name": "RSV2_Complete_Europe_Streets_intro_skip.zip"
+      "archive_asset_name": "RSV2_Complete_Europe_Streets_variants.zip"
     }
   ]
 }

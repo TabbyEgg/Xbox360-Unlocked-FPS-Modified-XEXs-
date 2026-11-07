@@ -143,13 +143,29 @@ The TU executables preserve `UPDATE:` paths and require the matching game/update
 
 | Asset | Build | Presentation behavior / purpose |
 | --- | --- | --- |
+| [RSV2_Streets_vsync60.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/rsv2-complete-europe-streets-1/RSV2_Streets_vsync60.xex) | Complete Edition Europe v0.0.0.6 | VSync and Streets access; normal intros, no intro skip. |
 | [RSV2_Streets_vsync60_skipall_shortflash.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/rsv2-complete-europe-streets-1/RSV2_Streets_vsync60_skipall_shortflash.xex) | Complete Edition Europe v0.0.0.6 | VSync, Streets access and intro skip; reported startup ~32 → 21 seconds. Dark CQC Training variant is laggy. |
 
 Use matching Complete Edition Europe game data, including the map assets. Streets access, intro timing and the dark CQC Training performance issue are contributor-reported. This build is separate from Media ID `1982EE1E`.
 
 | Asset | SHA-256 |
 | --- | --- |
+| `RSV2_Streets_vsync60.xex` | `49d18ee6f96352ecc80ba9e3c7598c3da3075aaeeb8302e8bb78bb91e2d469ce` |
 | `RSV2_Streets_vsync60_skipall_shortflash.xex` | `5d3f5a23aaf482ebb1313a52db534de1bb14a7d1604b6f18500047286a6544eb` |
+
+
+## Variants, pros and cons
+
+Both files target Complete Edition Europe: Title ID `55530807`, Media ID `47D7F6C0`, version `0.0.0.6`. Both retain the contributor-reported Streets access and VSync behavior. The absent **Exclusive Content tab** is a menu difference; it does not mean Streets map access is absent. These behavior notes are supplied by the contributor, not inferred from the filenames or header inspection.
+
+| Asset | Intro behavior | Pros | Cons / differences |
+| --- | --- | --- | --- |
+| `RSV2_Streets_vsync60.xex` | No intro skipping; normal intro sequence | Streets access; VSync; keeps the normal startup sequence | No startup-time saving; no Exclusive Content tab; dark CQC Training variant is laggy |
+| `RSV2_Streets_vsync60_skipall_shortflash.xex` | Intro skip with short flash | Streets access; VSync; reported startup ~32 → 21 seconds | Brief startup flash; no Exclusive Content tab; dark CQC Training variant is laggy |
+
+The Exclusive Content tab and dark CQC Training notes describe the supplied Complete Edition setup; no separate outcome for each exact file hash has been recorded. VSync does not guarantee sustained 60 FPS.
+
+Download `RSV2_Complete_Europe_Streets_variants.zip` for both executables, installation notes and hashes. Back up your original `default.xex`, select one variant, copy it into the matching complete extracted game folder and rename the selected copy to `default.xex`. Keep the matching map/game assets and fully restart the game when switching variants.
 
 ## Patch provenance and file checks
 
