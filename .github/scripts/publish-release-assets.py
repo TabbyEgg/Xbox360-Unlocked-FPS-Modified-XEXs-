@@ -126,7 +126,7 @@ def main() -> None:
             if len(matches) > 1:
                 raise ValueError("Duplicate release tags")
             metadata = {"name": release["title"], "body": release["notes"],
-                        "prerelease": release.get("prerelease", False), "make_latest": "false"}
+                        "prerelease": False, "make_latest": "false"}
             if matches:
                 remote = matches[0]
             else:

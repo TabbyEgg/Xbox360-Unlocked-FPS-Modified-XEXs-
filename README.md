@@ -4,6 +4,8 @@ Modified Xbox 360 executables for RGH/JTAG consoles, grouped by game in GitHub R
 
 ## Downloads
 
+All downloads are published as normal releases, never pre-releases.
+
 Open **Releases** and choose your game. Each game release provides its modified XEX variants as separate downloads, plus any required update-data files, instructions, and SHA-256 hashes.
 
 Match the release's Title ID, Media ID, executable version, and title-update requirements to your game before replacing files.
