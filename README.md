@@ -22,7 +22,7 @@ Other releases or updates may require different files.
 
 DiRT 3: download `Dirt3_TU_FPS_variants.zip` and **try the A variant first**. Put its matching `patch.nfs` beside the selected executable, renamed `default.xex`, in the complete extracted game folder. See the DiRT 3 release for full instructions.
 
-[RSV2 Complete Edition Europe release](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/tag/rsv2-complete-europe-streets-1): the Streets/intro-skip variant is separate from the older Media ID `1982EE1E` builds. The contributor reports Streets access and startup reduced from about 32 to 21 seconds; the dark CQC Training variant is laggy.
+[RSV2 Complete Edition Europe release](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/tag/rsv2-complete-europe-streets-1): the Streets/intro-skip variant is separate from the older Media ID `1982EE1E` builds. The contributor reports Streets access and startup reduced from about 32 to 21 seconds; the dark CQC Training variant reportedly drops to ~10–15 FPS during gameplay.
 
 ## Extract an ISO to get the XEX
 
@@ -144,7 +144,7 @@ The TU executables preserve `UPDATE:` paths and require the matching game/update
 | Asset | Build | Presentation behavior / purpose |
 | --- | --- | --- |
 | [RSV2_Streets_vsync60.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/rsv2-complete-europe-streets-1/RSV2_Streets_vsync60.xex) | Complete Edition Europe v0.0.0.6 | VSync and Streets access; normal intros, no intro skip. |
-| [RSV2_Streets_vsync60_skipall_shortflash.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/rsv2-complete-europe-streets-1/RSV2_Streets_vsync60_skipall_shortflash.xex) | Complete Edition Europe v0.0.0.6 | VSync, Streets access and intro skip; reported startup ~32 → 21 seconds. Dark CQC Training variant is laggy. |
+| [RSV2_Streets_vsync60_skipall_shortflash.xex](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/download/rsv2-complete-europe-streets-1/RSV2_Streets_vsync60_skipall_shortflash.xex) | Complete Edition Europe v0.0.0.6 | VSync, Streets access and intro skip; reported startup ~32 → 21 seconds. Dark CQC Training variant reportedly drops to ~10–15 FPS during gameplay. |
 
 Use matching Complete Edition Europe game data, including the map assets. Streets access, intro timing and the dark CQC Training performance issue are contributor-reported. This build is separate from Media ID `1982EE1E`.
 
@@ -160,8 +160,8 @@ Both files target Complete Edition Europe: Title ID `55530807`, Media ID `47D7F6
 
 | Asset | Intro behavior | Pros | Cons / differences |
 | --- | --- | --- | --- |
-| `RSV2_Streets_vsync60.xex` | No intro skipping; normal intro sequence | Streets access; VSync; keeps the normal startup sequence | No startup-time saving; no Exclusive Content tab; dark CQC Training variant is laggy |
-| `RSV2_Streets_vsync60_skipall_shortflash.xex` | Intro skip with short flash | Streets access; VSync; reported startup ~32 → 21 seconds | Brief startup flash; no Exclusive Content tab; dark CQC Training variant is laggy |
+| `RSV2_Streets_vsync60.xex` | No intro skipping; normal intro sequence | Streets access; VSync; keeps the normal startup sequence | No startup-time saving; no Exclusive Content tab; dark CQC Training variant reportedly drops to ~10–15 FPS during gameplay |
+| `RSV2_Streets_vsync60_skipall_shortflash.xex` | Intro skip with short flash | Streets access; VSync; reported startup ~32 → 21 seconds | Brief startup flash; no Exclusive Content tab; dark CQC Training variant reportedly drops to ~10–15 FPS during gameplay |
 
 The Exclusive Content tab and dark CQC Training notes describe the supplied Complete Edition setup; no separate outcome for each exact file hash has been recorded. VSync does not guarantee sustained 60 FPS.
 
