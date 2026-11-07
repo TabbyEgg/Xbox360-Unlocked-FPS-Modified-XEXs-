@@ -50,21 +50,32 @@
       "title": "Rainbow Six Vegas 2 \u2014 unlocked FPS and V-sync files",
       "tag": "rsv2-fps-files-1",
       "prerelease": false,
-      "notes": "# Rainbow Six Vegas 2 \u2014 unlocked framerate and vsync variants\n\nFor **RGH/JTAG Xbox 360 consoles**, title ID **55530807**, media ID **1982EE1E**. These XEX files are not re-signed.\n\nDownload one of the three separate assets in this release:\n\n| Asset | Build | Presentation behavior |\n| --- | --- | --- |\n| RSV2_base_unlocked.xex | Base v00000001 | Unlocked presentation; tearing can occur |\n| RSV2_TU_unlocked.xex | Matching TU executable merged, v00000201 | Unlocked presentation; tearing can occur |\n| RSV2_TU_vsync60.xex | Matching TU executable merged, v00000201 | One-refresh vsync interval; a 60 FPS presentation ceiling on a 60 Hz display |\n\nThe user reports that unlocked RSV2 runs with the title update and benefits in smaller Terrorist Hunt maps. The user also reports that vsync reduces tearing. These observations do not establish a measured or sustained 60 FPS result, and the exact tested file hashes were not recorded.\n\nBack up your original `default.xex`. Choose the asset matching your game/update setup, rename it to `default.xex`, and place it in the game folder. Keep the matching game/update installation: the TU assets include the merged executable changes, preserve `UPDATE:` paths, and are not a complete update package.\n\nAll three assets match the previously verified files byte for byte. Their only changes from the clean normalized or TU-merged executable are the documented presentation instructions.\n\n| Asset | SHA-256 |\n| --- | --- |\n| RSV2_base_unlocked.xex | ae59051dc3d88d50a16e545602ac947e3c965d52e78aceeec6c2b7642bad1768 |\n| RSV2_TU_unlocked.xex | f535cfefac0e8270ae1186a1a06e07096bdb97d3f296d0404452cee5d82a2c53 |\n| RSV2_TU_vsync60.xex | 27c4838ffc0ce54caea6cec88bc745ac09012438e0b45e99f8772b6f1c89841c |\n\n## Complete Edition Europe \u2014 Streets and intro-skip variant\n\n`RSV2_Streets_vsync60_skipall_shortflash.xex` is supplied for **Complete Edition Europe**, Title ID `55530807`, **Media ID `47D7F6C0`**, executable version `0.0.0.6`. It is a different build from the older `1982EE1E` assets above; do not interchange them.\n\nContributor-reported features and behavior:\n\n- Adds access to the exclusive **Streets** map whose original distribution service was shut down. Use the matching Complete Edition game data; the XEX alone does not supply map assets.\n- VSync presentation and intro skipping. Startup is reported to fall from approximately **32 seconds to 21 seconds**.\n- Known downside: the **dark variant of CQC Training is laggy**.\n\nBack up your Complete Edition `default.xex`, copy this variant into that complete extracted game folder and rename the selected copy to `default.xex`. Fully exit and relaunch. Keep the matching game assets. The contributor's feature and timing reports are distinct from the header/hash inspection performed here.\n\n`RSV2_Complete_Europe_Streets_intro_skip.zip` packages this XEX with these installation notes and its checksum.\n",
+      "notes": "# Rainbow Six Vegas 2 \u2014 unlocked framerate and vsync variants\n\nFor **RGH/JTAG Xbox 360 consoles**, title ID **55530807**, media ID **1982EE1E**. These XEX files are not re-signed.\n\nDownload one of the three separate assets in this release:\n\n| Asset | Build | Presentation behavior |\n| --- | --- | --- |\n| RSV2_base_unlocked.xex | Base v00000001 | Unlocked presentation; tearing can occur |\n| RSV2_TU_unlocked.xex | Matching TU executable merged, v00000201 | Unlocked presentation; tearing can occur |\n| RSV2_TU_vsync60.xex | Matching TU executable merged, v00000201 | One-refresh vsync interval; a 60 FPS presentation ceiling on a 60 Hz display |\n\nThe user reports that unlocked RSV2 runs with the title update and benefits in smaller Terrorist Hunt maps. The user also reports that vsync reduces tearing. These observations do not establish a measured or sustained 60 FPS result, and the exact tested file hashes were not recorded.\n\nBack up your original `default.xex`. Choose the asset matching your game/update setup, rename it to `default.xex`, and place it in the game folder. Keep the matching game/update installation: the TU assets include the merged executable changes, preserve `UPDATE:` paths, and are not a complete update package.\n\nAll three assets match the previously verified files byte for byte. Their only changes from the clean normalized or TU-merged executable are the documented presentation instructions.\n\n| Asset | SHA-256 |\n| --- | --- |\n| RSV2_base_unlocked.xex | ae59051dc3d88d50a16e545602ac947e3c965d52e78aceeec6c2b7642bad1768 |\n| RSV2_TU_unlocked.xex | f535cfefac0e8270ae1186a1a06e07096bdb97d3f296d0404452cee5d82a2c53 |\n| RSV2_TU_vsync60.xex | 27c4838ffc0ce54caea6cec88bc745ac09012438e0b45e99f8772b6f1c89841c |\n\n## Looking for Complete Edition Europe?\n\nThe Streets / VSync / intro-skip build, Media ID `47D7F6C0`, has its own release: https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/tag/rsv2-complete-europe-streets-1\n",
       "source": {
-        "size": 7993613,
-        "sha256": "8e4d151689d35cf12f267b86205d1d1e28019762f4261b20f573d7c363c0d291",
-        "blob_sha": "8777fdc17fa4c536503ddace6e6f3d54249dba4e"
+        "size": 27151312,
+        "sha256": "0a465a59023f5028e1fff9b0d8487ee4c51db47988e0d61d34d8c9205cd5701e",
+        "blob_sha": "a985af816b51870c7dfc9193d4f1738320c74159"
       },
       "assets": [
         {
-          "archive_path": "RSV2_Streets_vsync60_skipall_shortflash.xex",
-          "name": "RSV2_Streets_vsync60_skipall_shortflash.xex",
-          "size": 7993344,
-          "sha256": "5d3f5a23aaf482ebb1313a52db534de1bb14a7d1604b6f18500047286a6544eb"
+          "archive_path": "Rainbow Six Vegas 2/RSV2_TU_unlocked.xex",
+          "name": "RSV2_TU_unlocked.xex",
+          "size": 24690688,
+          "sha256": "f535cfefac0e8270ae1186a1a06e07096bdb97d3f296d0404452cee5d82a2c53"
+        },
+        {
+          "archive_path": "Rainbow Six Vegas 2/RSV2_TU_vsync60.xex",
+          "name": "RSV2_TU_vsync60.xex",
+          "size": 24690688,
+          "sha256": "27c4838ffc0ce54caea6cec88bc745ac09012438e0b45e99f8772b6f1c89841c"
+        },
+        {
+          "archive_path": "Rainbow Six Vegas 2/RSV2_base_unlocked.xex",
+          "name": "RSV2_base_unlocked.xex",
+          "size": 24625152,
+          "sha256": "ae59051dc3d88d50a16e545602ac947e3c965d52e78aceeec6c2b7642bad1768"
         }
-      ],
-      "archive_asset_name": "RSV2_Complete_Europe_Streets_intro_skip.zip"
+      ]
     },
     {
       "title": "Bully: Scholarship Edition \u2014 unlocked FPS and V-sync files",
@@ -96,6 +107,26 @@
           "sha256": "ac5f72bd41a64d5ca60b08e6e9e3bd182dd61efe37623456e9814e1f733b72cd"
         }
       ]
+    },
+    {
+      "title": "Rainbow Six Vegas 2 \u2014 Complete Edition Europe, Streets + VSync + intro skip",
+      "tag": "rsv2-complete-europe-streets-1",
+      "prerelease": false,
+      "notes": "# Rainbow Six Vegas 2 \u2014 Complete Edition Europe\n\n`RSV2_Streets_vsync60_skipall_shortflash.xex` is supplied for **Complete Edition Europe**, Title ID `55530807`, **Media ID `47D7F6C0`**, executable version `0.0.0.6`. It is a different build from the older `1982EE1E` assets in the separate original-edition release; do not interchange them.\n\nContributor-reported features and behavior:\n\n- Adds access to the exclusive **Streets** map whose original distribution service was shut down. Use the matching Complete Edition game data; the XEX alone does not supply map assets.\n- VSync presentation and intro skipping. Startup is reported to fall from approximately **32 seconds to 21 seconds**.\n- Known downside: the **dark variant of CQC Training is laggy**.\n\nBack up your Complete Edition `default.xex`, copy this variant into that complete extracted game folder and rename the selected copy to `default.xex`. Fully exit and relaunch. Keep the matching game assets. The contributor's feature and timing reports are distinct from the header/hash inspection performed here.\n\n`RSV2_Complete_Europe_Streets_intro_skip.zip` packages this XEX with these installation notes and its checksum.\n\nThe ZIP includes the supplied XEX unchanged, its SHA-256 and installation notes. Its enclosed notes also describe the older builds for context; only the Complete Edition Europe XEX is packaged in this ZIP.\n",
+      "source": {
+        "size": 7993613,
+        "sha256": "8e4d151689d35cf12f267b86205d1d1e28019762f4261b20f573d7c363c0d291",
+        "blob_sha": "8777fdc17fa4c536503ddace6e6f3d54249dba4e"
+      },
+      "assets": [
+        {
+          "archive_path": "RSV2_Streets_vsync60_skipall_shortflash.xex",
+          "name": "RSV2_Streets_vsync60_skipall_shortflash.xex",
+          "size": 7993344,
+          "sha256": "5d3f5a23aaf482ebb1313a52db534de1bb14a7d1604b6f18500047286a6544eb"
+        }
+      ],
+      "archive_asset_name": "RSV2_Complete_Europe_Streets_intro_skip.zip"
     }
   ]
 }
