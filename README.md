@@ -4,8 +4,6 @@ Modified Xbox 360 executables for RGH/JTAG consoles, grouped by game in GitHub R
 
 ## Downloads
 
-All downloads are published as normal releases, never pre-releases.
-
 Open **Releases** and choose your game. Each game release provides its modified XEX variants as separate downloads, plus any required update-data files, instructions, and SHA-256 hashes.
 
 Match the release's Title ID, Media ID, executable version, and title-update requirements to your game before replacing files.
@@ -22,7 +20,7 @@ Other releases or updates may require different files.
 
 **Bully is not GOD-friendly: do not convert the modified Bully files to GOD. Use the complete extracted game folder.** This exception applies to both conversion methods below.
 
-DiRT 3: download `Dirt3_TU_FPS_variants.zip` and **try the A variant first**. Put its matching `patch.nfs` beside the selected executable, renamed `default.xex`, in the complete extracted game folder. See the DiRT 3 release for full instructions.
+DiRT 3: **try the A variant first**. Put its matching `patch.nfs` beside the selected executable, renamed `default.xex`, in the complete extracted game folder. See the DiRT 3 release for full instructions.
 
 [RSV2 Complete Edition Europe release](https://github.com/TabbyEgg/Xbox360-Unlocked-FPS-Modified-XEXs-/releases/tag/rsv2-complete-europe-streets-1): the Streets/intro-skip variant is separate from the older Media ID `1982EE1E` builds. The contributor reports Streets access and startup reduced from about 32 to 21 seconds; the dark CQC Training variant reportedly drops to ~10–15 FPS during gameplay.
 
